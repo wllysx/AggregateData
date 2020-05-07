@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AggregateData</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="emple">以这两种方式，都找到了可以直接用代码。我还是比较谨慎，先写了demo看了，效果还行，才往项目里写，心想这下总解决了哇，然而高兴得太早了。demo只是给了个TextView，可是项目是RecyclerView,一运行，程序能跑起来的就不错了，还有的直接OOM，于是心灰意冷。</string>
+</resources>

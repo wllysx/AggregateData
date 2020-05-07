@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".fragment.tqybfragment.WeatherFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/m_tq_tv07"
+                android:textSize="75sp"
+                android:text="55℃"
+                android:hint="55℃"
+                android:textColor="@color/qmui_config_color_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+            <TextView
+                android:id="@+id/m_tq_tv05"
+                android:layout_marginLeft="20dp"
+                android:textSize="30sp"
+                android:text="杭州"
+                android:hint="55℃"
+                android:textColor="@color/qmui_config_color_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/m_tq_iv01"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/duoyun"
+                android:layout_width="50dp"
+                android:layout_height="50dp"></ImageView>
+
+            <TextView
+                android:id="@+id/m_tq_tv01"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/m_tq_iv01"
+                android:layout_marginLeft="10dp"
+                android:textSize="22sp"
+                android:hint="晴"
+                android:textColor="@color/qmui_config_color_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+            <TextView
+                android:id="@+id/m_tq_tv06"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/m_tq_tv01"
+                android:layout_marginLeft="30dp"
+                android:textSize="22sp"
+                android:text="风向："
+                android:textColor="@color/qmui_config_color_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+            <TextView
+                android:id="@+id/m_tq_tv02"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/m_tq_tv06"
+                android:textSize="18sp"
+                android:hint="北风"
+                android:textColor="@color/qmui_config_color_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+            <TextView
+                android:id="@+id/m_tq_tv03"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/m_tq_tv02"
+                android:layout_marginLeft="10dp"
+                android:textSize="12sp"
+                android:hint="3~4级"
+                android:textColor="@color/qmui_config_color_white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+
+
+            <TextView
+                android:textColor="@color/qmui_config_color_white"
+                android:id="@+id/m_tq_tv04"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:text="04月28日"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"></TextView>
+        </RelativeLayout>
+        <TextView
+            android:textColor="@color/qmui_config_color_white"
+            android:layout_marginTop="30dp"
+            android:text="近日天气"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:background="@color/qmui_config_color_white"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"></LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_margin="10dp"
+            android:id="@+id/m_recycler_fragment_tqyb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>
+
+</LinearLayout>

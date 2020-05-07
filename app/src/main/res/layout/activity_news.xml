@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".NewsActivity">
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/m_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <com.wll.myproject.aggregatedata.view.MyScrollView
+        android:id="@+id/m_myscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/m_con_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.bigkoo.convenientbanner.ConvenientBanner
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/m_convenientBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    app:canLoop="true"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_inner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusableInTouchMode="false"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:id="@+id/m_gd_ll"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <com.google.android.material.tabs.TabLayout
+                        app:tabMode="scrollable"
+                        app:tabSelectedTextColor="@color/btn_filled_blue_bg_normal"
+                        app:tabIndicatorColor="@color/btn_filled_blue_bg_normal"
+                        android:id="@+id/m_tablayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"></com.google.android.material.tabs.TabLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:id="@+id/m_white_ll"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"></LinearLayout>
+
+
+                <com.wll.myproject.aggregatedata.view.MyViewPager
+                    android:id="@+id/m_viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></com.wll.myproject.aggregatedata.view.MyViewPager>
+
+        </LinearLayout>
+    </com.wll.myproject.aggregatedata.view.MyScrollView>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:paddingTop="35dp"
+        android:id="@+id/m_news_toolbar"
+        android:background="@color/btn_filled_blue_bg_normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textSize="30sp"
+            android:typeface="normal"
+            android:layout_gravity="center"
+            android:id="@+id/textView"
+            android:text="新闻"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"></TextView>
+    </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:layout_below="@+id/m_news_toolbar"
+        android:id="@+id/ll_outer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="vertical" />
+
+
+
+</RelativeLayout>

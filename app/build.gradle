@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.wll.myproject.aggregatedata"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    //加入下面四行。
+    // Butterknife requires Java 8.
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+
+    implementation 'org.xutils:xutils:3.8.5'//xutils3用来访问sqlite数据库。
+    //加这两行
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0' //tabLayout 顶部导航栏。实现，可以绑定viewpager的。
+
+    implementation 'com.jakewharton:butterknife:10.2.0'//黄油刀控件。
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.2'  //1.0.5及以前版本的老用户升级需谨慎，API改动过大
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.2'  //没有使用特殊Header，可以不加这行
+    implementation 'com.bigkoo:convenientbanner:2.1.5'//地址变小写了，额。。。轮廓图。
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'//轮廓图必须要加recyclerView的依赖。。
+
+    implementation 'com.google.android.material:material:1.0.0'//顶部导航栏。tablayout
+
+    implementation 'com.qmuiteam:qmui:2.0.0-alpha07'  //QMUI控件依赖。
+
+    implementation 'androidx.recyclerview:recyclerview:1.1.0' //列表布局。
+    implementation 'com.squareup.okhttp3:okhttp:4.5.0-RC1' //访问网络okhttp3
+    implementation 'com.alibaba:fastjson:1.2.68' //fastJson
+
+    implementation 'com.dsw.calendar:library:1.0.0'
+    implementation 'com.github.bumptech.glide:glide:4.11.0'//日历控件api
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
+}
